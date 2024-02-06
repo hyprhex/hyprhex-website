@@ -1,17 +1,78 @@
 baseURL: "https://hyprhex.me/"
 languageCode: en-us
-title: Hyprhex | Build and Break APIs.
+title: Hyprhex
 
+# hugo theme
 theme: PaperMod
 
-# Home Info Mode
+# Home Profile Mode
 params:
-  homeInfoParams:
-    Title: Welcome to Hyprhex 
-    Content: Build and break APIs for save world data.
+  profileMode:
+    enabled: true
+    title: "Salah Eddine (hyprhex)" # optional default will be site title
+    subtitle: | 
+              ### Backend developer focuses on 
+              ***Building*** and ***Breaking APIs***  to save world ***data***.
+    imageUrl: "img/profile.jpeg" # optional
+    imageTitle: "Salah Eddine" # optional
+    imageWidth: 120 # custom size
+    imageHeight: 120 # custom size
+    buttons:
+      - name: Blog
+        url: "/posts"
+      - name: Resume
+        url: "https://www.hyprhex.me"
 
-  socialIcons:
+  socialIcons: # optional
     - name: "Twitter"
-      url: "https://x.com/hyprhex"
+      url: "https://www.x.com/hyprhex"
     - name: "GitHub"
       url: "https://www.github.com/hyprhex"
+    - name: "LinkedIn"
+      url: "https://www.linkedin.com/in/salaheddinemebkhouti/"
+  # Favicons
+  assets:
+    favicon: "/img/profile.jpeg"
+    favicon16x16: "/img/profile.jpeg"
+    favicon32x32: "/img/profile.jpeg"
+    apple_touch_icon: "/img/profile.jpeg"
+    safari_pinned_tab: "/img/profile.jpeg"
+  # Blog post
+  ShowShareButtons: true
+  ShowReadingTime: true
+  ShowToc: false
+  ShowBreadCrumbs: true
+  ShowPostNavLinks: true
+  ShowCodeCopyButtons: true
+  author: ["Hyprhex"]
+
+# Home Info Mode
+# params:
+#   homeInfoParams:
+#     Title: Welcome to Hyprhex
+#     Content: Build and break APIs for save world data.
+#
+#   socialIcons:
+#     - name: "Twitter"
+#       url: "https://x.com/hyprhex"
+#     - name: "GitHub"
+#       url: "https://www.github.com/hyprhex"
+
+# Hugo Menu
+menu:
+  main:
+    - identifier: search
+      name: Search
+      url: /search
+      weight: 10
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 20
+
+# Add Search page
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON # necessary for search
