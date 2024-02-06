@@ -3,3 +3,15 @@ languageCode: en-us
 title: Hyprhex | Build and Break APIs.
 
 theme: PaperMod
+
+# Home Info Mode
+params:
+  homeInfoParams:
+    Title: Welcome to Hyprhex 
+    Content: Build and break APIs for save world data.
+
+  socialIcons:
+    - name: "Twitter"
+      url: "https://x.com/hyprhex"
+    - name: "GitHub"
+      url: "https://www.github.com/hyprhex"
